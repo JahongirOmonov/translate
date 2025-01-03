@@ -31,8 +31,8 @@ async def setup_aiogram(dp: Dispatcher) -> None:
 
 async def set_bot_commands(bot: Bot):
     commands = [
-        BotCommand(command="start", description="Botni ishga tushirish"),
-        BotCommand(command="sms", description="Adminga xabar yuborish"),
+        BotCommand(command="start", description="Botni ishga tushirish")
+       #   BotCommand(command="sms", description="Adminga xabar yuborish"),
     ]
     await bot.set_my_commands(commands)
 

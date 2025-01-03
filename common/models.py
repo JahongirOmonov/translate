@@ -102,4 +102,4 @@ class Archive(BaseModel):
     author = models.ForeignKey(TelegramProfile, on_delete=models.CASCADE, related_name='archives')
 
     def __str__(self):
-        return self.title[:20]
+        return self.type[:20]

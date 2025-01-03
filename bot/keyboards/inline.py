@@ -9,7 +9,7 @@ async def get_subscribed_channels_markup(channel_list: list):
                 url=channel.url
             )
         )
-    markup.add(InlineKeyboardButton(text="Code Planet", url="https://www.instagram.com/mycodeplanet?igsh=MWw5cXd3NTdpMWlk&utm_source=qr"))
+    #  markup.add(InlineKeyboardButton(text="Code Planet", url="https://www.instagram.com/mycodeplanet?igsh=MWw5cXd3NTdpMWlk&utm_source=qr"))
     markup.add(InlineKeyboardButton(text="Tasdiqlash ✅", callback_data="confirm_channels"))
     return markup.adjust(*(1,)).as_markup()
 

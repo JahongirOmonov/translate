@@ -33,6 +33,7 @@ def prepare_router() -> Router:
     # router.message.filter(mytest_handler, Command("test"))  <-- bu test edi. har ehtimolga qarshi qoldirildi.
     # router.callback_query.register(callbaq, F.data.startswith("button")) <-- bu ham.
     router.callback_query.register(confirm_callback, F.data == "confirm_channels")
+    router.message.register(start, Command("start"))
 
     router.message.register(change_language, F.text == "Tilni almashtirish")
     router.message.register(change_language, F.text == "Change language")
@@ -102,7 +103,7 @@ def prepare_router() -> Router:
 
 
 
-    router.message.register(start, Command("start"))
+  
     # router.message.register(get_video_file_id, F.content_type==ContentType.VIDEO)
 
 

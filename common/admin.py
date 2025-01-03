@@ -33,7 +33,7 @@ class ArchiveAdmin(ImportExportModelAdmin):
 
     def short_title(self, obj):
         return obj.type[:100]
-    short_title.short_description = 'Title'
+    short_title.short_description = 'Type'
 
 
 @admin.register(Language)

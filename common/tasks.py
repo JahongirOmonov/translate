@@ -882,7 +882,7 @@ def uz_ru_voiceToVoice(voice_file_path, chat_id, api_token, msg_id, sticker_file
         translated_text = translator.translate(text, src="uz", dest="ru").text
 
         # Generate audio file for translated text
-        tts = gTTS(translated_text, lang="en")
+        tts = gTTS(translated_text, lang="ru")
         output_file = f"{os.path.splitext(voice_file_path)[0]}_translated.mp3"
         tts.save(output_file)
 
@@ -897,7 +897,7 @@ def uz_ru_voiceToVoice(voice_file_path, chat_id, api_token, msg_id, sticker_file
             response = requests.post(url, data=payload, files=files)
 
             max_length = 4096
-            text = f"<b>🇺🇿UZ ➡️ EN🇺🇸</b>\n\n{translated_text}"
+            text = f"<b>🇺🇿UZ ➡️ RU🇷🇺</b>\n\n{translated_text}"
             for i in range(0, len(text), max_length):
                 chunk = text[i:i + max_length]
 
